@@ -1,0 +1,228 @@
+{
+  "generated_at": "2026-11-24T18:01:17.042+05:30",
+  "run_started_at": "2026-11-24T17:50:51.947+05:30",
+  "input": {
+    "stream": {
+      "url_masked": "rtsp://admin:***@183.83.217.22:554/Streaming/Channels/1001",
+      "container_format": "rtsp",
+      "transport": "tcp",
+      "transport_verified": false,
+      "negotiated_transport": null,
+      "codec": "hevc",
+      "codec_long_name": "HEVC (High Efficiency Video Coding)",
+      "profile": "Main",
+      "width": 640,
+      "height": 480,
+      "pix_fmt": "yuvj420p",
+      "nominal_fps": 25.0,
+      "time_base": "1/90000",
+      "declared_bit_rate": null,
+      "other_tracks": [],
+      "connect_rtt_ms": 20.37,
+      "open_duration_ms": 1022.8
+    },
+    "resolution": "640x480",
+    "codec": "hevc",
+    "profile": "Main",
+    "transport": "tcp",
+    "fps": {
+      "nominal": 25.0,
+      "source_measured": 25.0,
+      "effective_capture": 24.98
+    },
+    "bitrate_kbps": {
+      "average": 188.0,
+      "current_window": 237.8,
+      "peak_window": 269.7,
+      "window_s": 10.0,
+      "declared": null
+    },
+    "gop": {
+      "frames": {
+        "count": 623,
+        "mean": 25.0,
+        "min": 25.0,
+        "p50": 25.0,
+        "p90": 25.0,
+        "p95": 25.0,
+        "p99": 25.0,
+        "max": 25.0
+      },
+      "keyframe_interval_s": {
+        "count": 623,
+        "mean": 1.0,
+        "min": 0.999,
+        "p50": 1.0,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "max": 1.0
+      },
+      "keyframes_seen": 624
+    },
+    "totals": {
+      "sessions": 1,
+      "connected_s": 624.0,
+      "packets": 15599,
+      "bytes": 14666481,
+      "frames_decoded": 15588,
+      "decode_errors": 0
+    }
+  },
+  "output": {
+    "recording": {
+      "clips": 3,
+      "total_duration_s": 623.5,
+      "frames_in": 15588,
+      "frames_written": 15588,
+      "frames_dropped": 0,
+      "segments": [
+        {
+          "name": "cam01_20261124_175053_seg0001.mp4",
+          "path": "output\\live_run\\segments\\20261124\\cam01_20261124_175053_seg0001.mp4",
+          "container": "mov,mp4,m4a,3gp,3g2,mj2",
+          "codec": "h264",
+          "profile": "High",
+          "width": 640,
+          "height": 360,
+          "pix_fmt": "yuv420p",
+          "fps_nominal": 25.0,
+          "fps_measured": 25.0,
+          "duration_s": 300.038,
+          "frames": 7501,
+          "size_bytes": 19365968,
+          "bitrate_kbps": 515.5,
+          "keyframes": 151,
+          "gop_frames": {
+            "count": 150,
+            "mean": 50.0,
+            "min": 50.0,
+            "p50": 50.0,
+            "p90": 50.0,
+            "p95": 50.0,
+            "p99": 50.0,
+            "max": 50.0
+          },
+          "keyframe_interval_s": {
+            "count": 150,
+            "mean": 2.0,
+            "min": 1.999,
+            "p50": 2.0,
+            "p90": 2.0,
+            "p95": 2.0,
+            "p99": 2.0,
+            "max": 2.0
+          },
+          "index": 1,
+          "start_time": "2026-11-24T17:50:53.473+05:30",
+          "end_time": "2026-11-24T17:55:53.511+05:30",
+          "frames_written": 7501,
+          "closed_reason": "rollover"
+        },
+        {
+          "name": "cam01_20261124_175553_seg0002.mp4",
+          "path": "output\\live_run\\segments\\20261124\\cam01_20261124_175553_seg0002.mp4",
+          "container": "mov,mp4,m4a,3gp,3g2,mj2",
+          "codec": "h264",
+          "profile": "High",
+          "width": 640,
+          "height": 360,
+          "pix_fmt": "yuv420p",
+          "fps_nominal": 25.0,
+          "fps_measured": 25.0,
+          "duration_s": 299.999,
+          "frames": 7500,
+          "size_bytes": 18966913,
+          "bitrate_kbps": 504.9,
+          "keyframes": 150,
+          "gop_frames": {
+            "count": 149,
+            "mean": 50.0,
+            "min": 50.0,
+            "p50": 50.0,
+            "p90": 50.0,
+            "p95": 50.0,
+            "p99": 50.0,
+            "max": 50.0
+          },
+          "keyframe_interval_s": {
+            "count": 149,
+            "mean": 2.0,
+            "min": 1.999,
+            "p50": 2.0,
+            "p90": 2.0,
+            "p95": 2.0,
+            "p99": 2.0,
+            "max": 2.0
+          },
+          "index": 2,
+          "start_time": "2026-11-24T17:55:53.500+05:30",
+          "end_time": "2026-11-24T18:00:53.499+05:30",
+          "frames_written": 7500,
+          "closed_reason": "rollover"
+        },
+        {
+          "name": "cam01_20261124_180053_seg0003.mp4",
+          "path": "output\\live_run\\segments\\20261124\\cam01_20261124_180053_seg0003.mp4",
+          "container": "mov,mp4,m4a,3gp,3g2,mj2",
+          "codec": "h264",
+          "profile": "High",
+          "width": 640,
+          "height": 360,
+          "pix_fmt": "yuv420p",
+          "fps_nominal": 25.0,
+          "fps_measured": 25.0,
+          "duration_s": 23.48,
+          "frames": 587,
+          "size_bytes": 1539064,
+          "bitrate_kbps": 523.2,
+          "keyframes": 12,
+          "gop_frames": {
+            "count": 11,
+            "mean": 50.0,
+            "min": 50.0,
+            "p50": 50.0,
+            "p90": 50.0,
+            "p95": 50.0,
+            "p99": 50.0,
+            "max": 50.0
+          },
+          "keyframe_interval_s": {
+            "count": 11,
+            "mean": 2.0,
+            "min": 2.0,
+            "p50": 2.0,
+            "p90": 2.0,
+            "p95": 2.0,
+            "p99": 2.0,
+            "max": 2.0
+          },
+          "index": 3,
+          "start_time": "2026-11-24T18:00:53.499+05:30",
+          "end_time": "2026-11-24T18:01:16.979+05:30",
+          "frames_written": 587,
+          "closed_reason": "shutdown"
+        }
+      ]
+    },
+    "frames": {
+      "count": 3118,
+      "target_fps": 5.0,
+      "effective_fps": 5.0,
+      "interval_s": {
+        "count": 3117,
+        "mean": 0.2,
+        "min": 0.19,
+        "p50": 0.2,
+        "p90": 0.2,
+        "p95": 0.2,
+        "p99": 0.2,
+        "max": 0.239
+      },
+      "resolution": "640x360",
+      "avg_size_bytes": 58212,
+      "first_frame_time": "2026-11-24T17:50:53.473+05:30",
+      "last_frame_time": "2026-11-24T18:01:16.899+05:30"
+    }
+  }
+}

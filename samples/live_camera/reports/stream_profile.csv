@@ -1,0 +1,6 @@
+role,name,codec,profile,width,height,pix_fmt,fps_nominal,fps_source_measured,fps_effective,bitrate_kbps_avg,bitrate_kbps_peak,gop_frames_mean,gop_frames_min,gop_frames_max,keyframe_interval_s_mean,duration_s,frames,size_bytes,transport
+input,rtsp://admin:***@183.83.217.22:554/Streaming/Channels/1001,hevc,Main,640,480,yuvj420p,25.0,25.0,24.98,188.0,269.7,25.0,25.0,25.0,1.0,624.0,15588,14666481,tcp
+output_clip,cam01_20261124_175053_seg0001.mp4,h264,High,640,360,yuv420p,25.0,25.0,25.0,515.5,,50.0,50.0,50.0,2.0,300.038,7501,19365968,
+output_clip,cam01_20261124_175553_seg0002.mp4,h264,High,640,360,yuv420p,25.0,25.0,25.0,504.9,,50.0,50.0,50.0,2.0,299.999,7500,18966913,
+output_clip,cam01_20261124_180053_seg0003.mp4,h264,High,640,360,yuv420p,25.0,25.0,25.0,523.2,,50.0,50.0,50.0,2.0,23.48,587,1539064,
+output_frames,jpeg_frames,mjpeg,,640,360,,5.0,,5.0,,,,,,,,3118,181505016,

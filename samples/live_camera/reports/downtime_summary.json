@@ -1,0 +1,13 @@
+{
+  "camera": "cam01",
+  "observation_start": "2026-11-24T17:50:51.948+05:30",
+  "observation_end": "2026-11-24T18:01:17.054+05:30",
+  "observation_s": 625.106,
+  "outages": 0,
+  "ongoing_outage": false,
+  "total_downtime_s": 0,
+  "longest_outage_s": 0.0,
+  "availability_pct": 100.0,
+  "total_reconnect_attempts": 0,
+  "details": []
+}
