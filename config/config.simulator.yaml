@@ -1,0 +1,25 @@
+# Configuration for running against the local MediaMTX simulator (see scripts/ and README).
+camera:
+  name: simcam
+  rtsp_url: rtsp://127.0.0.1:8554/simcam
+
+stream:
+  transport: tcp
+  open_timeout_s: 5
+  read_timeout_s: 3
+  stall_timeout_s: 5
+
+recording:
+  segment_seconds: 60         # shorter clips so the demo finishes quickly
+  width: 640
+  height: 360
+
+extraction:
+  target_fps: 5.0
+
+reconnect:
+  initial_delay_s: 0.5
+  max_delay_s: 8.0
+
+output:
+  root_dir: output/simulator

@@ -1,0 +1,67 @@
+# RTSP ingestor configuration.
+# Precedence (lowest -> highest): defaults < this file < environment / .env < CLI --set overrides.
+
+camera:
+  name: cam01                 # used in every output filename
+  rtsp_url: ""                # leave empty here; supply via RTSP_URL in .env (contains credentials)
+
+stream:
+  transport: tcp              # enforced: only "tcp" is accepted (validated at load time)
+  open_timeout_s: 10          # connect + DESCRIBE/SETUP/PLAY budget
+  read_timeout_s: 5           # no bytes for this long -> read timeout -> reconnect
+  stall_timeout_s: 8          # bytes arriving but no decodable frames -> stall -> reconnect
+  low_latency: true           # fflags=nobuffer, flags=low_delay
+  max_delay_ms: 500           # demuxer reorder buffer
+  socket_buffer_bytes: 1048576
+  video_only: true            # do not SETUP the audio track (saves bandwidth)
+
+recording:
+  enabled: true
+  segment_seconds: 300        # 5-minute rolling clips
+  width: 640
+  height: 360
+  keep_aspect: false          # true = letterbox instead of stretch
+  codec: libx264
+  crf: 23
+  preset: veryfast
+  tune: zerolatency           # no lookahead -> frames are muxed immediately (low record latency)
+  gop_seconds: 2.0
+  container: mp4
+  queue_size: 1500            # lossless queue (~60 s at 25 fps) - recorder never drops frames
+  align_to_wallclock: false   # true = cut at hh:00, hh:05, ... (first clip will be partial)
+
+extraction:
+  enabled: true
+  target_fps: 5.0
+  jpeg_quality: 90
+  use_downscaled: true        # save frames at recording resolution (false = native resolution)
+  partition_by_hour: true     # frames/<YYYYMMDD>/<HH>/...
+  queue_size: 256
+
+reconnect:
+  initial_delay_s: 1.0
+  max_delay_s: 30.0
+  multiplier: 2.0
+  jitter: 0.2                 # +/-20 % randomisation to avoid thundering herd
+  max_attempts: 0             # 0 = retry forever
+
+profiling:
+  snapshot_interval_s: 30
+  bitrate_window_s: 10
+
+latency:
+  warmup_s: 3.0               # ignore samples right after (re)connect (camera GOP-cache burst)
+  clock_window_s: 60          # sliding window for the source-clock baseline
+  max_samples: 200000
+  summary_interval_s: 30
+
+output:
+  root_dir: output
+  timezone: local             # local | utc  (used for filenames)
+
+logging:
+  level: INFO
+  file: logs/ingestor.log     # relative to output.root_dir
+  json: false
+
+run_duration_s: null          # null = run until Ctrl+C
