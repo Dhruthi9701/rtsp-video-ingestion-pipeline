@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rtsp-ingestor"
+version = "1.0.0"
+description = "Reliable, low-latency RTSP ingestion service: segmented recording, 5 FPS frame extraction, stream profiling, reconnection and latency telemetry."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Dhruthi M Sathish" }]
+dependencies = [
+    "av>=13.0",
+    "numpy>=1.26",
+    "opencv-python-headless>=4.9",
+    "pydantic>=2.6",
+    "PyYAML>=6.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-timeout>=2.3", "ruff>=0.5"]
+
+[project.scripts]
+rtsp-ingestor = "rtsp_ingestor.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+timeout = 120
+markers = ["integration: tests that need a local MediaMTX RTSP server"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]

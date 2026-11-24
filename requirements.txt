@@ -1,0 +1,7 @@
+# Runtime dependencies (pinned to tested minimums)
+av>=13.0                      # PyAV: FFmpeg bindings (RTSP demux, HEVC/H.264 decode, libx264 encode)
+numpy>=1.26
+opencv-python-headless>=4.9   # resize + JPEG encode
+pydantic>=2.6                 # typed config validation
+PyYAML>=6.0
+python-dotenv>=1.0            # loads .env (keeps camera credentials out of git)
