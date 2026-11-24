@@ -1,0 +1,102 @@
+{
+  "unit": "ms",
+  "metrics": {
+    "arrival_to_decode_ms": {
+      "count": 308,
+      "mean": 0.1,
+      "min": 0.06,
+      "p50": 0.1,
+      "p90": 0.14,
+      "p95": 0.15,
+      "p99": 0.21,
+      "max": 0.24
+    },
+    "arrival_to_frame_saved_ms": {
+      "count": 62,
+      "mean": 4.27,
+      "min": 2.88,
+      "p50": 3.79,
+      "p90": 4.69,
+      "p95": 7.09,
+      "p99": 14.27,
+      "max": 14.97
+    },
+    "arrival_to_record_ms": {
+      "count": 308,
+      "mean": 3.46,
+      "min": 2.21,
+      "p50": 3.01,
+      "p90": 4.05,
+      "p95": 4.72,
+      "p99": 13.33,
+      "max": 32.78
+    },
+    "capture_to_frame_saved_ms": {
+      "count": 62,
+      "mean": 12.1,
+      "min": 3.9,
+      "p50": 11.87,
+      "p90": 19.0,
+      "p95": 20.94,
+      "p99": 23.85,
+      "max": 26.74
+    },
+    "connect_rtt_ms": {
+      "count": 2,
+      "mean": 3.75,
+      "min": 1.37,
+      "p50": 3.75,
+      "p90": 5.65,
+      "p95": 5.89,
+      "p99": 6.08,
+      "max": 6.13
+    },
+    "decode_to_frame_saved_ms": {
+      "count": 62,
+      "mean": 4.17,
+      "min": 2.81,
+      "p50": 3.71,
+      "p90": 4.57,
+      "p95": 6.99,
+      "p99": 14.11,
+      "max": 14.88
+    },
+    "decode_to_record_ms": {
+      "count": 308,
+      "mean": 3.36,
+      "min": 2.14,
+      "p50": 2.91,
+      "p90": 3.95,
+      "p95": 4.54,
+      "p99": 13.23,
+      "max": 32.7
+    },
+    "source_jitter_ms": {
+      "count": 308,
+      "mean": 7.98,
+      "min": 0.0,
+      "p50": 7.8,
+      "p90": 14.38,
+      "p95": 15.42,
+      "p99": 16.89,
+      "max": 20.71
+    }
+  },
+  "descriptions": {
+    "source_jitter_ms": "Per-frame arrival delay above the network floor, from source PTS vs local arrival clock (sliding-window min baseline)",
+    "arrival_to_decode_ms": "Packet arrival on socket -> decoded frame available",
+    "decode_to_record_ms": "Decoded frame -> encoded & muxed into the 5-minute clip",
+    "arrival_to_record_ms": "Packet arrival -> frame persisted in clip (end-to-end ingestion, recording path)",
+    "decode_to_frame_saved_ms": "Decoded frame -> JPEG fully written to disk",
+    "arrival_to_frame_saved_ms": "Packet arrival -> JPEG on disk (end-to-end ingestion, extraction path)",
+    "capture_to_frame_saved_ms": "Estimated source capture time -> JPEG on disk (source-referenced end-to-end, excludes network floor)",
+    "connect_rtt_ms": "TCP handshake round-trip time to the RTSP server at each (re)connect"
+  },
+  "network_floor_one_way_ms": 1.88,
+  "estimated_source_to_disk_ms": {
+    "p50": 13.75,
+    "p95": 22.82,
+    "max": 28.62,
+    "note": "capture_to_frame_saved + RTT/2 network floor; excludes camera-internal encode delay"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "camera": "simcam",
+  "observation_start": "2026-11-24T17:50:15.836+05:30",
+  "observation_end": "2026-11-24T17:50:37.924+05:30",
+  "observation_s": 22.087,
+  "outages": 1,
+  "ongoing_outage": false,
+  "total_downtime_s": 6.375,
+  "longest_outage_s": 6.375,
+  "availability_pct": 71.135,
+  "total_reconnect_attempts": 4,
+  "details": [
+    {
+      "outage_id": 1,
+      "disconnect_time": "2026-11-24T17:50:24.856+05:30",
+      "reconnect_time": "2026-11-24T17:50:31.231+05:30",
+      "reason": "end_of_stream",
+      "attempts": 4,
+      "downtime_s": 6.375,
+      "attempt_errors": [
+        "not_found",
+        "not_found",
+        "not_found"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+role,name,codec,profile,width,height,pix_fmt,fps_nominal,fps_source_measured,fps_effective,bitrate_kbps_avg,bitrate_kbps_peak,gop_frames_mean,gop_frames_min,gop_frames_max,keyframe_interval_s_mean,duration_s,frames,size_bytes,transport
+input,rtsp://127.0.0.1:18555/simcam,h264,Constrained Baseline,1280,720,yuv420p,25.0,25.0,21.974,6687.9,0.0,25.0,25.0,25.0,1.0,14.5,319,12136413,tcp
+output_clip,simcam_20261124_175018_seg0001.mp4,h264,High,640,360,yuv420p,25.0,25.0,25.0,925.4,,50.0,50.0,50.0,2.0,6.0,150,695592,
+output_clip,simcam_20261124_175024_seg0002.mp4,h264,High,640,360,yuv420p,25.0,25.0,25.0,954.6,,,,,,0.64,16,77370,
+output_clip,simcam_20261124_175031_seg0003.mp4,h264,High,640,360,yuv420p,25.0,25.0,25.0,943.6,,50.0,50.0,50.0,2.0,6.0,150,709233,
+output_clip,simcam_20261124_175037_seg0004.mp4,h264,High,640,360,yuv420p,25.0,25.0,25.0,1264.3,,,,,,0.12,3,19914,
+output_frames,jpeg_frames,mjpeg,,640,360,,5.0,,5.003,,,,,,,,65,1649375,
